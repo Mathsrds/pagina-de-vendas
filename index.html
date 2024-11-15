@@ -3,105 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso de Produção Musical e Beats</title>
+    <title>Workshop de Negócios Musicais</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
         body { font-family: Arial, sans-serif; }
         .section-title { text-align: center; margin: 2em 0; }
-        .btn-primary { background-color: #ff4500; border: none; }
-        .testimonials { background-color: #f9f9f9; padding: 2em; }
+        .tab-content { padding: 20px; }
+        .details, .benefits { background-color: #f7f7f7; padding: 20px; border-radius: 5px; }
         .footer { background-color: #333; color: #fff; text-align: center; padding: 1em; }
     </style>
 </head>
 <body>
 
-    <!-- Navbar -->
+    <!-- Header -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Produtor de Beats</a>
+            <a class="navbar-brand" href="#">Workshop de Negócios Musicais</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#beneficios">Benefícios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#depoimentos">Depoimentos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#video-section">Sobre o Produto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#cursos">Outros Cursos</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="jumbotron text-center">
-        <div class="container">
-            <h1 class="jumbotron-heading">Curso Completo de Produção Musical</h1>
-            <p class="lead text-muted">Transforme suas ideias em músicas profissionais e crie beats únicos!</p>
-            <a href="#inscricao" class="btn btn-primary btn-lg">Inscreva-se Agora</a>
+    <!-- Video Section -->
+    <section id="video-section" class="container mt-4">
+        <h2 class="section-title">Conheça o Workshop</h2>
+        <div class="embed-responsive embed-responsive-16by9 mb-3">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/hC76coDnk90" allowfullscreen></iframe>
         </div>
+        <p>Este é um conteúdo exclusivo para profissionais da música ou pessoas que querem entender como funciona o mercado da música no Brasil e no mundo...</p>
     </section>
 
-    <!-- Sobre o Produto -->
-    <section id="sobre" class="container">
-        <h2 class="section-title">O Que Você Vai Aprender</h2>
-        <p>Neste curso, você aprenderá desde o básico até técnicas avançadas de produção musical, mixagem, masterização e criação de beats.</p>
-    </section>
-
-    <!-- Carrossel de Exemplo -->
-    <section class="container">
-        <h2 class="section-title">Ouça Alguns Beats de Exemplo</h2>
-        <div id="carouselExample" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://source.unsplash.com/800x400/?music,beat" class="d-block w-100" alt="Beat Exemplo 1">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://source.unsplash.com/800x400/?studio,sound" class="d-block w-100" alt="Beat Exemplo 2">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://source.unsplash.com/800x400/?dj,turntable" class="d-block w-100" alt="Beat Exemplo 3">
-                </div>
-            </div>
-            <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Anterior</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Próximo</span>
-            </a>
-        </div>
-    </section>
-
-    <!-- Benefícios -->
-    <section id="beneficios" class="container">
-        <h2 class="section-title">Benefícios do Curso</h2>
-        <ul>
-            <li>Acesso vitalício ao conteúdo</li>
-            <li>Suporte direto com o instrutor</li>
-            <li>Certificado de conclusão</li>
-            <li>Comunidade exclusiva de produtores</li>
+    <!-- Tabs Section -->
+    <section class="container mt-4">
+        <ul class="nav nav-tabs" id="courseTabs" role="tablist">
+            <li class="nav-item"><a class="nav-link active" id="cronograma-tab" data-toggle="tab" href="#cronograma" role="tab">Cronograma</a></li>
+            <li class="nav-item"><a class="nav-link" id="negocios-tab" data-toggle="tab" href="#negocios" role="tab">Negócios com a Música</a></li>
+            <li class="nav-item"><a class="nav-link" id="espiritualidade-tab" data-toggle="tab" href="#espiritualidade" role="tab">Música e Espiritualidade</a></li>
+            <li class="nav-item"><a class="nav-link" id="planoacao-tab" data-toggle="tab" href="#planoacao" role="tab">Plano de Ação</a></li>
+            <li class="nav-item"><a class="nav-link" id="lives-tab" data-toggle="tab" href="#lives" role="tab">Lives e Entrevistas</a></li>
         </ul>
+
+        <div class="tab-content" id="courseTabsContent">
+            <!-- Cronograma -->
+            <div class="tab-pane fade show active" id="cronograma" role="tabpanel" aria-labelledby="cronograma-tab">
+                <h3>Cronograma</h3>
+                <p>Aqui será apresentado o cronograma completo do curso...</p>
+            </div>
+
+            <!-- Negócios com a Música -->
+            <div class="tab-pane fade" id="negocios" role="tabpanel" aria-labelledby="negocios-tab">
+                <h3>Music Business - Negócios com a Música</h3>
+                <ol>
+                    <li>0 - Introdução sobre o Negócio com a Música</li>
+                    <li>1 - Trabalhando a sua imagem</li>
+                    <!-- Continue o restante da lista conforme o conteúdo fornecido -->
+                    <li>23 - Revelando os segredos do mundo de produções que ninguém te ensina!!!</li>
+                </ol>
+            </div>
+
+            <!-- Música e Espiritualidade -->
+            <div class="tab-pane fade" id="espiritualidade" role="tabpanel" aria-labelledby="espiritualidade-tab">
+                <h3>Música, Psique e Espiritualidade</h3>
+                <ul>
+                    <li>1 - Introdução do módulo sobre música e espiritualidade</li>
+                    <li>2 - O beat na sua música</li>
+                    <!-- Continue conforme o conteúdo fornecido -->
+                    <li>8 - A permissão da espiritualidade na sua carreira artística</li>
+                </ul>
+            </div>
+
+            <!-- Plano de Ação -->
+            <div class="tab-pane fade" id="planoacao" role="tabpanel" aria-labelledby="planoacao-tab">
+                <h3>Plano de Ação</h3>
+                <ul>
+                    <li>0 - Introdução ao seu plano de ação</li>
+                    <li>1 - Investindo em sua carreira através de um orçamento</li>
+                    <!-- Continue conforme o conteúdo fornecido -->
+                </ul>
+            </div>
+
+            <!-- Lives e Entrevistas -->
+            <div class="tab-pane fade" id="lives" role="tabpanel" aria-labelledby="lives-tab">
+                <h3>Lives e Entrevistas – Bate papo com o D'Oliver</h3>
+                <ul>
+                    <li>Introdução - Módulo sobre conteúdos diversos</li>
+                    <li>O repertório autoral de um artista faz toda a diferença</li>
+                    <!-- Continue conforme o conteúdo fornecido -->
+                </ul>
+            </div>
+        </div>
     </section>
 
-    <!-- Depoimentos -->
-    <section id="depoimentos" class="testimonials text-center">
-        <h2 class="section-title">O Que Nossos Alunos Dizem</h2>
-        <p>"Curso incrível! Aprendi a criar meus próprios beats em casa." - João P.</p>
-        <p>"A qualidade do conteúdo é sensacional, recomendo para todos!" - Maria S.</p>
+    <!-- Details and Benefits Section -->
+    <section class="container mt-4 d-flex justify-content-between">
+        <div class="benefits col-md-6">
+            <h4>Vantagens</h4>
+            <p>O objetivo do nosso conteúdo é transformar você em um empreendedor da música...</p>
+        </div>
+        <div class="details col-md-5">
+            <h4>Detalhes</h4>
+            <ul>
+                <li>Garantia de 7 dias</li>
+                <li>Estude do seu jeito e em qualquer dispositivo</li>
+                <li>Para quem é este produto? Músicos, cantores, compositores, empresários, DJs, artistas.</li>
+            </ul>
+        </div>
     </section>
 
-    <!-- Inscrição -->
-    <section id="inscricao" class="text-center">
-        <h2 class="section-title">Pronto Para Começar?</h2>
-        <a href="#contato" class="btn btn-primary btn-lg">Inscreva-se Agora</a>
+    <!-- Outros Cursos -->
+    <section id="cursos" class="container mt-5">
+        <h3 class="section-title">Outros Cursos</h3>
+        <p>Aqui ficará a lista de outros cursos disponíveis no futuro.</p>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2023 Produtor de Beats. Todos os direitos reservados.</p>
+        <p>&copy; 2023 Workshop de Negócios Musicais. Todos os direitos reservados.</p>
     </footer>
 
     <!-- Bootstrap JS and dependencies -->
