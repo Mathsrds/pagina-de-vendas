@@ -6,28 +6,79 @@
     <title>Workshop de Negócios Musicais</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: Arial, sans-serif; }
-        .section-title { text-align: center; margin: 2em 0; }
-        .tab-content { padding: 20px; }
-        .details, .benefits { background-color: #f7f7f7; padding: 20px; border-radius: 5px; }
-        .footer { background-color: #333; color: #fff; text-align: center; padding: 1em; }
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            color: #333; 
+        }
+        header {
+            background: linear-gradient(to right, #ff7e5f, #feb47b);
+            padding: 1em 0;
+            color: #fff;
+        }
+        header .navbar-brand {
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+        .section-title {
+            text-align: center;
+            margin: 2em 0 1em;
+            font-weight: 600;
+            color: #ff4500;
+        }
+        .tab-content {
+            padding: 20px;
+            border: 2px solid #f5f5f5;
+            border-radius: 10px;
+            background: #fdfdfd;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .benefits, .details {
+            background: #ffefec;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 1em;
+        }
+        .benefits h4, .details h4 {
+            color: #ff4500;
+        }
+        .btn-primary {
+            background-color: #ff4500;
+            border-color: #ff4500;
+        }
+        .btn-primary:hover {
+            background-color: #e63900;
+            border-color: #e63900;
+        }
+        footer {
+            background: #ff4500;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+        .interactive-card:hover {
+            transform: scale(1.05);
+            transition: all 0.3s ease;
+        }
     </style>
 </head>
 <body>
 
     <!-- Header -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Workshop de Negócios Musicais</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="#video-section">Sobre o Produto</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#cursos">Outros Cursos</a></li>
-                </ul>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">🎵 Negócios Musicais</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a class="nav-link text-white" href="#video-section">Sobre</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#cursos">Cursos</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
@@ -39,10 +90,12 @@
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/hC76coDnk90" allowfullscreen></iframe>
         </div>
         <p>Este é um conteúdo exclusivo para profissionais da música ou pessoas que querem entender como funciona o mercado da música no Brasil e no mundo...</p>
+        <a href="#inscricao" class="btn btn-primary btn-lg d-block text-center mt-3">Quero Me Inscrever</a>
     </section>
 
     <!-- Tabs Section -->
-    <section class="container mt-4">
+    <section class="container mt-5">
+        <h2 class="section-title">Conteúdo do Curso</h2>
         <ul class="nav nav-tabs" id="courseTabs" role="tablist">
             <li class="nav-item"><a class="nav-link active" id="cronograma-tab" data-toggle="tab" href="#cronograma" role="tab">Cronograma</a></li>
             <li class="nav-item"><a class="nav-link" id="negocios-tab" data-toggle="tab" href="#negocios" role="tab">Negócios com a Música</a></li>
@@ -51,62 +104,91 @@
             <li class="nav-item"><a class="nav-link" id="lives-tab" data-toggle="tab" href="#lives" role="tab">Lives e Entrevistas</a></li>
         </ul>
 
-        <div class="tab-content" id="courseTabsContent">
-            <!-- Cronograma -->
+        <div class="tab-content mt-4" id="courseTabsContent">
             <div class="tab-pane fade show active" id="cronograma" role="tabpanel" aria-labelledby="cronograma-tab">
                 <h3>Cronograma</h3>
-                <p>Aqui será apresentado o cronograma completo do curso...</p>
+                <p>Descrição detalhada do cronograma...</p>
             </div>
-
-            <!-- Negócios com a Música -->
             <div class="tab-pane fade" id="negocios" role="tabpanel" aria-labelledby="negocios-tab">
                 <h3>Music Business - Negócios com a Música</h3>
                 <ol>
                     <li>0 - Introdução sobre o Negócio com a Música</li>
                     <li>1 - Trabalhando a sua imagem</li>
-                    <!-- Continue o restante da lista conforme o conteúdo fornecido -->
-                    <li>23 - Revelando os segredos do mundo de produções que ninguém te ensina!!!</li>
+                  <li>2 - SISRC - Programa para gerar ISRC de um fonograma</li>
+                    <li>3 - Estratégia Artística para sua Carreira na Música</li>
+                    <li>4 - Anitta e o Negócio com a Música - Publicidade</li>
+                    <li>5 - Conteúdo instrospectivo e conteúdo Extrovertido</li>
+                    <li>6 - Desvendando os segredos dos negócios na música</li>
+                    <li>7 - O Mercado Financeiro a sua relação com a Música</li>
+                    <li>8 - Carreira Artística e Projetos Visuais</li>
+                    <li>9 - Esse cantor não está conseguindo vender seus CDs ou lucrar com suas músicas</li>
+                    <li>10 - Aula sobre Mindset</li>
+                    <li>11 - A música não vai sair de você</li>
+                    <li>12 - Relações comerciais na área da música</li>
+                    <li>13 - Qualidade de música; o que podemos pensar sobre?</li>
+                    <li>14 - Tendência e padrões que viralizam no mercado da música - 2022</li>
+                    <li>15 - Negócios na música e os relacionamentos com pessoas</li>
+                    <li>16 - Projetos de incentivo à cultura e música</li>
+                    <li>17 - Abrindo nossa mente sobre o conceito de um projeto visual</li>
+                    <li>18 - Segredos obscuros do mercado de músicas autorais</li>
+                    <li>19 - O mundo da música que nunca te explicaram</li>
+                    <li>20 - A principal ferramenta para seguir uma carreira - Redes Sociais (Parte 1/2)</li>
+                    <li>21 - Marketing e Música - O que você deve saber</li>
+                    <li>22 - Revelando os segredos do mundo de produções que ninguém te ensina!!!</li>
+
                 </ol>
             </div>
-
-            <!-- Música e Espiritualidade -->
             <div class="tab-pane fade" id="espiritualidade" role="tabpanel" aria-labelledby="espiritualidade-tab">
                 <h3>Música, Psique e Espiritualidade</h3>
                 <ul>
                     <li>1 - Introdução do módulo sobre música e espiritualidade</li>
                     <li>2 - O beat na sua música</li>
-                    <!-- Continue conforme o conteúdo fornecido -->
+                    <li>3 - Músicos das densas frequências</li>
+                    <li>4 - Zona de conforto, desânimo e coisas mais</li>
+                    <li>5 - Reiki, música e cura</li>
+                    <li>6 - Música é Onda e Energia</li>
+                    <li>7 - Os segredos ocultos do mundo da música perante a espiritualidade</li>
                     <li>8 - A permissão da espiritualidade na sua carreira artística</li>
                 </ul>
             </div>
-
-            <!-- Plano de Ação -->
             <div class="tab-pane fade" id="planoacao" role="tabpanel" aria-labelledby="planoacao-tab">
                 <h3>Plano de Ação</h3>
                 <ul>
-                    <li>0 - Introdução ao seu plano de ação</li>
-                    <li>1 - Investindo em sua carreira através de um orçamento</li>
-                    <!-- Continue conforme o conteúdo fornecido -->
+                    <li>1 - Introdução ao seu plano de ação</li>
+                    <li>2 - Investindo em sua carreira através de um orçamento</li>
+                    <li>3 - Eu vou te provar a importância do projeto com nossos Membros</li>
+                    <li>4 - A melhor estratégia artística que você deve seguir em sua carreira</li>
                 </ul>
             </div>
-
-            <!-- Lives e Entrevistas -->
             <div class="tab-pane fade" id="lives" role="tabpanel" aria-labelledby="lives-tab">
-                <h3>Lives e Entrevistas – Bate papo com o D'Oliver</h3>
+                <h3>Lives e Entrevistas</h3>
                 <ul>
                     <li>Introdução - Módulo sobre conteúdos diversos</li>
                     <li>O repertório autoral de um artista faz toda a diferença</li>
-                    <!-- Continue conforme o conteúdo fornecido -->
+                   <li>Nada substitui o seu talento</li>
+                    <li>Erros que nós artistas e compositores cometemos</li>
+                    <li>Papo de músicos [Live com D'Oliver]</li>
+                    <li>Músicas Autorais</li>
+                    <li>Live da discórdia</li>
+                    <li>Música - Um dos maiores mercados do mundo! [Live]</li>
+                    <li>Mercado musical em tempos de pandemia</li>
+                    <li>Você desistiu do seu sonho com a música?</li>
+                    <li>Beatles e a história dos 432 Hz nas músicas</li>
+                    <li>Bate papo sobre Guias e Produções Musicais</li>
+                    <li>Fazer música é pensar no futuro!</li>
+                    <li>A falta de interesse dos artistas brasileiros</li>
+                    <li>Como trabalhar corretamente com música</li>
+                    <li>Ele mudou a música Brasileira para sempre - Entrevista com Sergio Carrer, O Feio</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- Details and Benefits Section -->
+    <!-- Benefits and Details -->
     <section class="container mt-4 d-flex justify-content-between">
         <div class="benefits col-md-6">
             <h4>Vantagens</h4>
-            <p>O objetivo do nosso conteúdo é transformar você em um empreendedor da música...</p>
+            <p>Transforme-se em um empreendedor da música...</p>
         </div>
         <div class="details col-md-5">
             <h4>Detalhes</h4>
@@ -121,11 +203,42 @@
     <!-- Outros Cursos -->
     <section id="cursos" class="container mt-5">
         <h3 class="section-title">Outros Cursos</h3>
-        <p>Aqui ficará a lista de outros cursos disponíveis no futuro.</p>
+        <div class="row">
+            <div class="col-md-4 interactive-card">
+                <div class="card">
+                    <img src="https://source.unsplash.com/400x300/?music,studio" class="card-img-top" alt="Curso 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Curso de Produção</h5>
+                        <p class="card-text">Aprenda a produzir suas próprias músicas.</p>
+                        <a href="#" class="btn btn-primary">Ver Mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 interactive-card">
+                <div class="card">
+                    <img src="https://source.unsplash.com/400x300/?dj,music" class="card-img-top" alt="Curso 2">
+                    <div class="card-body">
+                        <h5 class="card-title">DJ Profissional</h5>
+                        <p class="card-text">Descubra técnicas avançadas de mixagem.</p>
+                        <a href="#" class="btn btn-primary">Ver Mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 interactive-card">
+                <div class="card">
+                    <img src="https://source.unsplash.com/400x300/?sound,recording" class="card-img-top" alt="Curso 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Engenharia de Som</h5>
+                        <p class="card-text">Domine o áudio e a produção musical.</p>
+                        <a href="#" class="btn btn-primary">Ver Mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer mt-5">
         <p>&copy; 2023 Workshop de Negócios Musicais. Todos os direitos reservados.</p>
     </footer>
 
